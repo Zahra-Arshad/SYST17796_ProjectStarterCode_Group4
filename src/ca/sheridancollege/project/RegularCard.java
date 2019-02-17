@@ -16,7 +16,7 @@ public class RegularCard extends Card {
     int value;
 
     public static String RANKS[] = {"Spades", "Clubs", "Diamonds", "Hearts"};
-    public static String SUITS[] = {"Ace", "King", "Queen", "Jack", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+    public static String SUITS[] = {"Ace", "King", "Queen", "Jack", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"};
 
     @Override
     public String toString() {
