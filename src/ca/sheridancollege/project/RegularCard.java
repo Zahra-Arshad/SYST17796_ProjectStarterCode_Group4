@@ -11,9 +11,8 @@ package ca.sheridancollege.project;
  */
 public class RegularCard extends Card {
 
-    String rank;
-    String suit;
-    int value;
+    private String rank;
+    private String suit;
 
     public static String RANKS[] = {"Spades", "Clubs", "Diamonds", "Hearts"};
     public static String SUITS[] = {"Ace", "King", "Queen", "Jack", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"};
@@ -28,4 +27,34 @@ public class RegularCard extends Card {
         this.suit = suit;
     }
 
+    public int returnValue() {
+
+        switch (this.rank) {
+            case "Ace":
+            case "King":
+            case "Queen":
+            case "Jack":
+            case "Ten":
+                return 10;
+            case "Nine":
+                return 9;
+            case "Eight":
+                return 8;
+            case "Seven":
+                return 7;
+            case "Six":
+                return 6;
+            case "Five":
+                return 5;
+            case "Four":
+                return 4;
+            case "Three":
+                return 3;
+            case "Two":
+                return 2;
+            default:
+                return -1;
+        }
+
+    }
 }
