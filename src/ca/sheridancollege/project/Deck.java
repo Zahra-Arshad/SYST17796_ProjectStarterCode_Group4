@@ -18,7 +18,7 @@ public class Deck extends GroupOfCards{
         super.shuffle();
     }
     
-    public RegularCard deal(){
+    public Card deal(){
         return super.showCards().remove(0);
     }
     
