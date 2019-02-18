@@ -27,6 +27,10 @@ public class GroupOfCards
         size = givenSize;
     }
     
+    public void setCards(ArrayList<Card> cards){
+        this.cards = cards;
+    }
+    
     /**
      * A method that will get the group of cards as an ArrayList
      * @return the group of cards.
