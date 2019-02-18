@@ -6,20 +6,6 @@ import java.util.ArrayList;
  *
  * @author Anh Phan
  */
-class testing {
-
-    public static void main(String[] args) {
-        Deck deck = new Deck(52);
-        System.out.println(deck.toString());
-
-        System.out.println(deck.deal());
-        
-        System.out.println(deck.toString());
-        System.out.println(deck.getSize());
-
-    }
-}
-
 public class Deck extends GroupOfCards {
 
     public Deck(int size) {
