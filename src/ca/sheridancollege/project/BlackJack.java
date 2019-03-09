@@ -14,36 +14,37 @@ public class BlackJack extends Game {
 
     public void play() {
         String name = Helper.getString("What is your name? ");
-        
+
         while (true) {
-            GroupOfCards deck = new GroupOfCards(52);
+            Deck deck = new Deck(52); // Instanciating a deck
 
-            BlackJackPlayer player = new BlackJackPlayer(name);
-            BlackJackPlayer computer = new BlackJackPlayer("Computer");
+            BlackJackPlayer player = new BlackJackPlayer(name); // Instanciating a player
+            BlackJackPlayer computer = new BlackJackPlayer("Computer"); // Instanciating a bot
 
-            this.getPlayers().add(player);
-            this.getPlayers().add(computer);
+            super.getPlayers().add(player); // Adding players to the players list
+            super.getPlayers().add(computer);
 
+            player.receiveCard(deck.deal()); // Dealing cards to the player
             player.receiveCard(deck.deal());
-            player.receiveCard(deck.deal());
 
-            computer.receiveCard(deck.deal());
+            computer.receiveCard(deck.deal()); // Dealing cards to the bot
             computer.receiveCard(deck.deal());
 
-            while (computer.getPoints() < 17) {
+            while (computer.getPoints() < 17) { // Bot's moves
                 computer.receiveCard(deck.deal());
             }
-            while (true) {
-                System.out.println(player.toString());
+            while (true) { // Player's moves
+                System.out.println(player.toString()); // Printing out the player's hand
+                
+                if (player.getCards().size() >= 5 || player.getPoints() > 21) { // Limit of a hand is 5 cards, and 21 points
+                    break;
+                }
+                
                 int choice = Helper.getNumber("Do you want to hit?(0/1)");
                 if (choice != 1) {
                     break;
                 }
-                if(player.getCards().size() >= 5 || player.getPoints() > 21){
-                    break;
-                }
-
-                player.receiveCard(deck.deal());
+                player.receiveCard(deck.deal()); // Adding a card to player's hand
 
             }
 
@@ -51,7 +52,8 @@ public class BlackJack extends Game {
             if (Helper.getNumber("Do you want to play again?(0/1)") != 1) {
                 break;
             }
-            super.setPlayers(new ArrayList<>());
+            
+            super.setPlayers(new ArrayList<>()); // Setting new players list
         }
     }
 

@@ -27,21 +27,8 @@ public class GroupOfCards
     {
         size = givenSize;
         this.cards = new ArrayList<>();
-        
-        for (int i = 0; i < 13; i++) {
-            for (int j = 0; j < 4; j++) {
-                this.cards.add(new RegularCard(RegularCard.RANKS[i], RegularCard.SUITS[j]));
-            }
-        }
-        
-        this.shuffle();
     }
     
-    public Card deal() {
-        this.size -= 1;
-        return this.cards.remove(0);
-    }
-
     /**
      * A method that will get the group of cards as an ArrayList
      * @return the group of cards.
@@ -68,10 +55,6 @@ public class GroupOfCards
      */
     public void setSize(int givenSize) {
         size = givenSize;
-    }
-    
-    public String toString() {
-        return this.cards.toString();
     }
     
 }//end class

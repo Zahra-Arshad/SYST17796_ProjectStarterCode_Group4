@@ -1,8 +1,3 @@
-/*
- * Breshna Rahimzy
- * Student ID: 991487145
- *     SYST10199 - WEB Programming
- */
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
@@ -30,6 +25,7 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
         cards.add(card);
         this.points += ((RegularCard)card).returnValue();
 
+        // Dealing with ace
         if (card.toString().contains(RegularCard.RANKS[0])) {
             this.aces += 1;
         }
@@ -59,7 +55,7 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
     }
     
     public String toString(){
-        return this.getPlayerID() + " have: " + this.cards.toString();
+        return this.getPlayerID() + " have: " + this.cards.toString(); // Printing out the hand
     }
 
 }
