@@ -5,6 +5,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Anh Phan
+ * @modifier Zahra Arshad
  */
 public class BlackJack extends Game {
 
@@ -13,7 +14,7 @@ public class BlackJack extends Game {
     }
 
     public void play() {
-        String name = Helper.getString("What is your name? ");
+        String name = Helper.getString("Welcome to Blackjack!\nWhat is your name?\n--> ");
 
         while (true) {
             Deck deck = new Deck(52); // Instanciating a deck
@@ -35,12 +36,12 @@ public class BlackJack extends Game {
             }
             while (true) { // Player's moves
                 System.out.println(player.toString()); // Printing out the player's hand
-                
+
                 if (player.getCards().size() >= 5 || player.getPoints() > 21) { // Limit of a hand is 5 cards, and 21 points
                     break;
                 }
-                
-                int choice = Helper.getNumber("Do you want to hit?(0/1)");
+
+                int choice = Helper.getNumber("Do you want to hit?(No - 0/Yes - 1)\n-->");
                 if (choice != 1) {
                     break;
                 }
@@ -49,10 +50,10 @@ public class BlackJack extends Game {
             }
 
             this.declareWinner();
-            if (Helper.getNumber("Do you want to play again?(0/1)") != 1) {
+            if (Helper.getNumber("Do you want to play again?(No - 0/Yes - 1)\n-->") != 1) {
                 break;
             }
-            
+
             super.setPlayers(new ArrayList<>()); // Setting new players list
         }
     }
@@ -67,20 +68,20 @@ public class BlackJack extends Game {
             if (B.getPoints() > 21) {
                 msg = "Both of you busted! Draw!";
             } else {
-                msg = A.getPlayerID() + " busted! " + B.getPlayerID() + " win!";
+                msg = A.getPlayerID() + " Busted! " + B.getPlayerID() + " Wins!";
             }
         } else if (B.getPoints() > 21) {
-            msg = B.getPlayerID() + " Busted! " + A.getPlayerID() + " win!";
+            msg = B.getPlayerID() + " Busted! " + A.getPlayerID() + " Wins!";
         } else {
             switch (((BlackJackPlayer) A).compareTo((BlackJackPlayer) B)) {
                 case 0:
                     msg = "Draw";
                     break;
                 case 1:
-                    msg = A.getPlayerID() + " win! " + B.getPlayerID() + " Lost!";
+                    msg = A.getPlayerID() + " wins! " + B.getPlayerID() + " Lost!";
                     break;
                 case -1:
-                    msg = B.getPlayerID() + " win! " + A.getPlayerID() + " Lost!";
+                    msg = B.getPlayerID() + " wins! " + A.getPlayerID() + " Lost!";
                     break;
             }
         }

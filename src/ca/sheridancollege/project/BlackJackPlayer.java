@@ -6,6 +6,7 @@ import java.util.ArrayList;
  *
  * @author Breshna Rahimzy
  * @modifier Anh Phan
+ * @modifier Zahra Arshad
  */
 public class BlackJackPlayer extends Player implements Comparable<BlackJackPlayer> {
 
@@ -55,7 +56,7 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
     }
     
     public String toString(){
-        return this.getPlayerID() + " have: " + this.cards.toString(); // Printing out the hand
+        return this.getPlayerID() + " has: " + this.cards.toString(); // Printing out the hand
     }
 
 }
