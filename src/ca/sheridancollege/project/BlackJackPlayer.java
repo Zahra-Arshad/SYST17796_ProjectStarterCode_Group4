@@ -24,7 +24,7 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
 
     public void receiveCard(Card card) {
         cards.add(card);
-        this.points += ((RegularCard)card).returnValue();
+        this.points += ((RegularCard) card).returnValue();
 
         // Dealing with ace
         if (card.toString().contains(RegularCard.RANKS[0])) {
@@ -42,7 +42,7 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
     }
 
     public void play() {
-        
+
     }
 
     public int compareTo(BlackJackPlayer o) {
@@ -54,8 +54,8 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
             return -1;
         }
     }
-    
-    public String toString(){
+
+    public String toString() {
         return this.getPlayerID() + " has: " + this.cards.toString(); // Printing out the hand
     }
 
