@@ -27,7 +27,7 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
         this.points += ((RegularCard)card).returnValue();
 
         // Dealing with ace
-        if (card.toString().contains(RegularCard.RANKS[0])) {
+        if (card.toString().contains(String.valueOf(RegularCard.RANKS.Ace))) {
             this.aces += 1;
         }
 

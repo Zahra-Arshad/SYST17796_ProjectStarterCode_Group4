@@ -13,9 +13,9 @@ public class Deck extends GroupOfCards{
     public Deck(int givenSize) {
         super(givenSize);
         
-        for(String i : RegularCard.RANKS){
-            for(String j : RegularCard.SUITS){
-                deck.add(new RegularCard(i,j)); // Populating the deck
+        for(RegularCard.RANKS i : RegularCard.RANKS.values()){
+            for(RegularCard.SUITS j : RegularCard.SUITS.values()){
+                deck.add(new RegularCard(String.valueOf(i), String.valueOf(j))); // Populating the deck
             }
         }
         
