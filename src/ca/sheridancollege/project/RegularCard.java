@@ -7,7 +7,7 @@ package ca.sheridancollege.project;
 
 /**
  *
- * @author zahra
+ * @author zahra,
  */
 public class RegularCard extends Card {
 
