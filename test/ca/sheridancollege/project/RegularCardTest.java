@@ -53,6 +53,22 @@ public class RegularCardTest {
 //        fail("The test case is a prototype.");
     }
     
+    /**
+     * Test of returnValue method, of class RegularCard.
+     */
+    @Test
+    public void testReturnValueBoundary() {
+        System.out.println("returnValue boundary case");
+        Deck deck = new Deck(52);
+        Card instance = deck.deal();
+        
+        int result = instance.returnValue();
+        boolean expResult = result == 1 || result == 2 || result == 3 || result == 4 || result == 5 || result == 6 || result == 7 || result == 8 || result == 9 || result == 10;
+        assertEquals(expResult, true);
+        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+    }
+    
      /**
      * Test of returnValue method, of class RegularCard.
      */

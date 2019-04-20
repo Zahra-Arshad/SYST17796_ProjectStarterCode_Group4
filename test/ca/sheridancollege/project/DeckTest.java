@@ -55,6 +55,20 @@ public class DeckTest {
      * Test of deal method, of class Deck.
      */
     @Test
+    public void testDealBoundary() {
+        System.out.println("deal boundary case");
+        Deck instance = new Deck(52);
+        Card result = instance.deal();
+        assertNotNull(result);
+        assertEquals(true, result instanceof Card);
+        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+    }
+    
+     /**
+     * Test of deal method, of class Deck.
+     */
+    @Test
     public void testDealBad() {
         System.out.println("deal bad case");
         Deck instance = new Deck(52);
