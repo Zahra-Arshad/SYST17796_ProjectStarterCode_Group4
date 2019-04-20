@@ -1,8 +1,4 @@
-/*
- * Anh Phan 
- *  991 489 221
- *  SYST10199 - WEB PROGRAMMING
- */
+
 package ca.sheridancollege.project;
 
 import org.junit.After;

@@ -1,8 +1,3 @@
-/*
- * Anh Phan 
- *  991 489 221
- *  SYST10199 - WEB PROGRAMMING
- */
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
@@ -47,8 +42,7 @@ public class BlackJackPlayerTest {
         BlackJackPlayer instance = new BlackJackPlayer("name");
         ArrayList<Card> result = instance.getCards();
         assertEquals(true, result instanceof ArrayList);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+       
     }
 
     /**
@@ -66,8 +60,7 @@ public class BlackJackPlayerTest {
 
         int result = instance.getPoints();
         assertEquals(true, result > 0 && result <= 50);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+    
     }
 
     /**
@@ -85,8 +78,7 @@ public class BlackJackPlayerTest {
 
         int result = instance.getPoints();
         assertEquals(false, result < 0 || result > 50);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -130,8 +122,7 @@ public class BlackJackPlayerTest {
         }
        
         assertEquals(true, instance.getPoints() == 21);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+
     }
 
 }

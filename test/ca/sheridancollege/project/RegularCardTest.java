@@ -1,8 +1,4 @@
-/*
- * Anh Phan 
- *  991 489 221
- *  SYST10199 - WEB PROGRAMMING
- */
+
 package ca.sheridancollege.project;
 
 import org.junit.After;
@@ -49,8 +45,7 @@ public class RegularCardTest {
         boolean expResult = true;
         int result = instance.returnValue();
         assertEquals(expResult, result <= 10 && result > 0);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+       
     }
     
     /**
@@ -65,8 +60,7 @@ public class RegularCardTest {
         int result = instance.returnValue();
         boolean expResult = result == 1 || result == 2 || result == 3 || result == 4 || result == 5 || result == 6 || result == 7 || result == 8 || result == 9 || result == 10;
         assertEquals(expResult, true);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+      
     }
     
      /**
@@ -80,8 +74,7 @@ public class RegularCardTest {
         boolean expResult = false;
         int result = instance.returnValue();
         assertEquals(expResult, result > 10 || result <= 0);
-        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
+       
     }
     
 }
