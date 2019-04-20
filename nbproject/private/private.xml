@@ -5,10 +5,13 @@
         <group>
             <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/src/ca/sheridancollege/project/Card.java</file>
             <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/src/ca/sheridancollege/project/RegularCard.java</file>
+            <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/test/ca/sheridancollege/project/RegularCardTest.java</file>
             <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/src/ca/sheridancollege/project/BlackJack.java</file>
             <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/src/ca/sheridancollege/project/Player.java</file>
             <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/src/ca/sheridancollege/project/Deck.java</file>
             <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/src/ca/sheridancollege/project/Helper.java</file>
+            <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/test/ca/sheridancollege/project/BlackJackPlayerTest.java</file>
+            <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/test/ca/sheridancollege/project/DeckTest.java</file>
             <file>file:/Users/phannguyenanh/data/2019/col_winter_softwared/SYST17796_ProjectStarterCode_Group4/src/ca/sheridancollege/project/BlackJackPlayer.java</file>
         </group>
     </open-files>
