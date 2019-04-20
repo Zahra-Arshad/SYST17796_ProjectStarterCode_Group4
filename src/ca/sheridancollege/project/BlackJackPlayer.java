@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class BlackJackPlayer extends Player implements Comparable<BlackJackPlayer> {
 
     private ArrayList<Card> cards = new ArrayList<>();
-    private int points;
+    private int points = 0;
     private int aces;
 
     public BlackJackPlayer(String name) {
@@ -23,8 +23,8 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
     }
 
     public void receiveCard(Card card) {
-        cards.add(card);
-        this.points += ((RegularCard)card).returnValue();
+        cards.add((RegularCard)card);
+        this.points += card.returnValue();
 
         // Dealing with ace
         if (card.toString().contains(String.valueOf(RegularCard.RANKS.Ace))) {
@@ -36,13 +36,35 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
             this.points -= 9;
         }
     }
+    
+    public boolean isBusted(){
+        return this.points > 21;
+    }
+    
+
+    public boolean checkDoubleAce() {
+        Card firstCard = null;
+        Card secondCard = null;
+        try {
+            firstCard = this.cards.get(0);
+            secondCard = this.cards.get(1);
+
+            return firstCard.toString().contains(String.valueOf(RegularCard.RANKS.Ace)) && secondCard.toString().contains(String.valueOf(RegularCard.RANKS.Ace));
+            
+        } catch (Exception e) {
+            e.getStackTrace();
+        } finally {
+            return false;
+        }
+
+    }
 
     public int getPoints() {
         return this.points;
     }
 
     public void play() {
-        
+
     }
 
     public int compareTo(BlackJackPlayer o) {
@@ -54,9 +76,9 @@ public class BlackJackPlayer extends Player implements Comparable<BlackJackPlaye
             return -1;
         }
     }
-    
-    public String toString(){
-        return this.getPlayerID() + " has: " + this.cards.toString(); // Printing out the hand
+
+    public String toString() {
+        return this.getPlayerID() + " has: " + this.cards.toString() + " - Points: " + this.getPoints(); // Printing out the hand
     }
 
 }

@@ -26,6 +26,16 @@ public class RegularCard extends Card {
         this.rank = rank;
         this.suit = suit;
     }
+    
+    public int suitLevel(){
+        switch(this.suit){
+            case "Hearts": return 4;
+            case "Diamonds": return 3;
+            case "Clubs": return 2;
+            case "Spades": return 1;
+            default: return -1;
+        }
+    }
 
     public int returnValue() {
 
